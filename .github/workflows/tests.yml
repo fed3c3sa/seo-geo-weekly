@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.10", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Compile the scripts
+        run: python -m py_compile skills/seo-geo-weekly/scripts/audit_live.py skills/seo-geo-weekly/scripts/compare.py skills/seo-geo-weekly/scripts/indexnow.py skills/seo-geo-weekly/scripts/schedule.py skills/seo-geo-weekly/scripts/seo_checks.py skills/seo-geo-weekly/scripts/verify_site.py
+      - name: Check the plugin manifests parse
+        run: python -c "import json; [json.load(open(p)) for p in ('.claude-plugin/plugin.json', '.claude-plugin/marketplace.json')]"
+      - name: Run the tests
+        run: python -m unittest discover -s tests -v

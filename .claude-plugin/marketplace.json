@@ -1,0 +1,21 @@
+{
+  "name": "seo-geo-weekly",
+  "owner": {
+    "name": "fed3c3sa",
+    "url": "https://github.com/fed3c3sa"
+  },
+  "metadata": {
+    "description": "Marketplace hosting the seo-geo-weekly plugin for Claude Code.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "seo-geo-weekly",
+      "source": "./",
+      "description": "SEO + GEO loop for any website from Google Search Console and Bing Webmaster data: guided setup, weekly diagnosis and fixes, indexing requests, reports, optional weekly schedule. Provides the seo-geo-weekly skill.",
+      "category": "productivity",
+      "version": "1.0.0",
+      "keywords": ["seo", "geo", "search-console", "bing-webmaster", "ai-search"]
+    }
+  ]
+}

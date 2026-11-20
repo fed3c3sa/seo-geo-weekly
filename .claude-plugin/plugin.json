@@ -1,0 +1,13 @@
+{
+  "name": "seo-geo-weekly",
+  "version": "1.0.0",
+  "description": "SEO + GEO (AI-answer visibility) loop for any website, driven by Google Search Console and Bing Webmaster Tools through Claude in Chrome: guided first-time setup, weekly data, diagnosis, safe edits, gates, publishing, indexing requests, reports, and an optional weekly schedule on your own computer.",
+  "author": {
+    "name": "fed3c3sa",
+    "url": "https://github.com/fed3c3sa"
+  },
+  "homepage": "https://github.com/fed3c3sa/seo-geo-weekly",
+  "repository": "https://github.com/fed3c3sa/seo-geo-weekly",
+  "license": "MIT",
+  "keywords": ["seo", "geo", "aeo", "search-console", "bing-webmaster", "indexnow", "ai-search", "llms-txt", "claude-in-chrome"]
+}

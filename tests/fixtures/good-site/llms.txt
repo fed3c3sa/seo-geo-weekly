@@ -1,0 +1,5 @@
+# Example Studio
+
+> Handmade furniture in Turin.
+
+- [About]({{ORIGIN}}/about/)
