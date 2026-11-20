@@ -74,6 +74,9 @@ def say(status, msg):
 
 print(f"# Baseline for {O}\n")
 variants = sorted({f"{s}://{h}/" for s in ("http", "https") for h in (apex, "www." + apex)})
+if urlparse(O).port:  # a local or staging address: the public http/https/www variants are not this site
+    say("NOTE", f"{O} has an explicit port: the http/https/www redirect check is skipped")
+    variants = []
 for v in variants:
     code, _, loc, _, _ = get(v, body=False)
     if v == O + "/":
